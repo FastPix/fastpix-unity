@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <IsPackable>true</IsPackable>
-    <PackageId>FastPix</PackageId>
+    <PackageId>FastPix.Unity.SDK</PackageId>
     <Version>0.1.0</Version>
     <Authors>FastPix-dev</Authors>
     <Company>FastPix</Company>
