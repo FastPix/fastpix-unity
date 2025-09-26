@@ -16,16 +16,16 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore src/Fastpix/Fastpix.csproj
+        run: dotnet restore src/FastPix/FastPix.csproj
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore src/Fastpix/Fastpix.csproj
+        run: dotnet build --configuration Release --no-restore src/FastPix/FastPix.csproj
 
       - name: Pack
-        run: dotnet pack --configuration Release --no-build --output ./nupkg src/Fastpix/Fastpix.csproj
+        run: dotnet pack --configuration Release --no-build --output ./nupkg src/FastPix/FastPix.csproj
 
       - name: Publish to NuGet
         uses: actions/upload-artifact@v4
