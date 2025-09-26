@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>FastPix</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>FastPix-dev</Authors>
+    <Company>FastPix</Company>
+    <Owners>devs@fastpix.io</Owners>]
+
+    <!-- Product / website -->
+<PackageProjectUrl>https://fastpix.io</PackageProjectUrl>
+<RepositoryUrl>https://github.com/FastPix/fastpix-unity</RepositoryUrl>
+<RepositoryType>git</RepositoryType>
+
+<!-- Support info -->
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>
+      For support, contact support@fastpix.io
+    </PackageReleaseNotes>
+    <DocumentationFile>docs/fastpix.io.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <Description>A Unity-Native, Developer-Friendly SDK for Seamless Integration with the FastPix Platform API</Description>
+     <Copyright>Copyright (c) FastPix 2025</Copyright>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\docs\**\*" Pack="true" PackagePath="\docs"  CopyToOutputDirectory="PreserveNewest"/>
+    <PackageReference Include="newtonsoft.json" Version="13.0.3" />
+    <PackageReference Include="nodatime" Version="3.1.9" />  
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>$(UNITY_PATH)/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

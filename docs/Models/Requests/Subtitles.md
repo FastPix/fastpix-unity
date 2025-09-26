@@ -1,0 +1,13 @@
+# Subtitles
+
+Generates subtitle files for audio/video files.
+
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            | Example                                                                                                |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `LanguageName`                                                                                         | *string*                                                                                               | :heavy_minus_sign:                                                                                     | Name of the language for the subtitles.                                                                | english                                                                                                |
+| `Metadata`                                                                                             | Dictionary<String, *string*>                                                                           | :heavy_minus_sign:                                                                                     | Tag a video in "key" : "value" pairs for searchable metadata. Maximum 10 entries, 255 characters each. | {<br/>"key1": "value1"<br/>}                                                                           |
+| `LanguageCode`                                                                                         | [fastpix.io.Models.Requests.LanguageCode](../../Models/Requests/LanguageCode.md)                       | :heavy_minus_sign:                                                                                     | Language codes (BCP 47 compliant) used for text files.<br/>                                            | en                                                                                                     |

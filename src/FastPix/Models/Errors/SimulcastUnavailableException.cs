@@ -1,0 +1,40 @@
+
+
+#nullable enable
+namespace fastpix.io.Models.Errors
+{
+    using Newtonsoft.Json;
+    using System;
+    using UnityEngine.Networking;
+    using UnityEngine;
+    using fastpix.io.Models.Components;
+    
+    public class SimulcastUnavailableException : Exception
+    {
+
+        /// <summary>
+        /// It demonstrates whether the request is successful or not.
+        /// </summary>
+        [SerializeField]
+        [JsonProperty("success")]
+        public bool? Success { get; set; }
+
+        /// <summary>
+        /// Returns the problem that has occured.<br/>
+        /// 
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// </summary>
+        [SerializeField]
+        [JsonProperty("error")]
+        public SimulcastUnavailableError? Error { get; set; }
+
+        /// <summary>
+        /// Raw HTTP response; suitable for custom response parsing
+        /// </summary>
+        [SerializeField]
+        [JsonProperty("-")]
+        public UnityWebRequest? RawResponse { get; set; }
+    }
+}

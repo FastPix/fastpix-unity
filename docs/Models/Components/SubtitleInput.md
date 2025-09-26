@@ -1,0 +1,13 @@
+# SubtitleInput
+
+Generates subtitle files for audio/video files.
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          | Example                                                                              |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `Type`                                                                               | *string*                                                                             | :heavy_check_mark:                                                                   | Defines the type of input.<br/>                                                      | subtitle                                                                             |
+| `Url`                                                                                | *string*                                                                             | :heavy_check_mark:                                                                   | The direct URL of the subtitle file.                                                 | http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.vtt     |
+| `LanguageName`                                                                       | *string*                                                                             | :heavy_check_mark:                                                                   | Name of the language in which the subtitles will be generated.                       | english                                                                              |
+| `LanguageCode`                                                                       | [fastpix.io.Models.Components.LanguageCode](../../Models/Components/LanguageCode.md) | :heavy_check_mark:                                                                   | Language code for content localization                                               |                                                                                      |
