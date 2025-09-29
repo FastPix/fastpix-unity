@@ -322,7 +322,7 @@ namespace fastpix.io.Utils
 
             var boundary = UnityWebRequest.GenerateBoundary();
 
-            var parts = mediaType.Split(";");
+            var parts = mediaType.Split(';');
 
             return new SerializedRequestBody(
                 $"{parts[0]}; boundary={Encoding.ASCII.GetString(boundary)}",

@@ -11,7 +11,7 @@ namespace UnityEngine
 
     public class AsyncOperation
     {
-        public Action<AsyncOperation> completed;
+        public Action<AsyncOperation>? completed;
         internal void Complete() => completed?.Invoke(this);
     }
 }
@@ -83,8 +83,8 @@ namespace UnityEngine.Networking
         public Uri uri { get; private set; }
         public string url { get; set; }
         public long responseCode { get; set; }
-        public DownloadHandler downloadHandler { get; set; }
-        public UploadHandler uploadHandler { get; set; }
+        public DownloadHandler? downloadHandler { get; set; }
+        public UploadHandler? uploadHandler { get; set; }
         public Result result { get; set; } = Result.Success;
 
         public UnityWebRequest(string url, string method)
@@ -93,9 +93,9 @@ namespace UnityEngine.Networking
             this.uri = new Uri(url);
         }
 
-        public void SetRequestHeader(string key, string value) { }
+        public void SetRequestHeader(string? key, string? value) { }
         public Task SendWebRequest() => Task.CompletedTask;
-        public string GetResponseHeader(string name) => null;
+        public string? GetResponseHeader(string name) => null;
         public void Dispose() { }
 
         public enum Result { Success, ConnectionError, DataProcessingError, ProtocolError }
@@ -111,7 +111,7 @@ namespace UnityEngine.Networking
     {
         public virtual byte[] data => Array.Empty<byte>();
         public virtual string text => System.Text.Encoding.UTF8.GetString(data);
-        public virtual string GetResponseHeader(string name) => null;
+        public virtual string? GetResponseHeader(string name) => null;
     }
 
     public class UploadHandler { }
