@@ -175,11 +175,11 @@ namespace fastpix.io.Utils
 
             metadata = new Dictionary<string, string>();
 
-            var groups = Value.Split(" ");
+            var groups = Value.Split(' ');
 
             foreach (var group in groups)
             {
-                var parts = group.Split(":");
+                var parts = group.Split(':');
 
                 if (parts.Length != 2)
                 {
@@ -196,11 +196,11 @@ namespace fastpix.io.Utils
         {
             Dictionary<string, string> values = new Dictionary<string, string>();
 
-            var groups = raw.Split(",");
+            var groups = raw.Split(',');
 
             foreach (var group in groups)
             {
-                var parts = group.Split("=");
+                var parts = group.Split('=');
                 var val = "";
                 if (parts.Length == 2)
                 {

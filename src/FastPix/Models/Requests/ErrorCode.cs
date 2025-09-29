@@ -98,9 +98,9 @@ namespace fastpix.io.Models.Requests
                 if (json == "null") {
                     return null;
                 }
-                if (json[0] == '"' && json[^1] == '"'){
+                if (json[0] == '"' && json[json.Length - 1] == '"'){
                     return new ErrorCode(ErrorCodeType.Str) {
-                        Str = json[1..^1]
+                        Str = json.Substring(1, json.Length - 2)
                     };
                 } 
                 try {

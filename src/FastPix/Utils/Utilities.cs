@@ -171,9 +171,9 @@ namespace fastpix.io.Utils
             Regex surroundingQuotesRegex = new Regex("^\"(.*)\"$");
             var match = surroundingQuotesRegex.Match(input);
             // TODO: code review, this was modified due to compiler error with the use of values
-            if (match.Groups.Count() == 2)
+            if (match.Groups.Count == 2)
             {
-                return match.Groups.Last().ToString();
+                return match.Groups[1].Value;
             }
             return input;
         }
