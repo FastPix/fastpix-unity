@@ -15,6 +15,7 @@
 <!-- Support info -->
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
       For support, contact support@fastpix.io
@@ -32,7 +33,7 @@
     <PackageReference Include="nodatime" Version="3.1.9" />  
   </ItemGroup>
   
-  <ItemGroup>
+  <ItemGroup Condition="'$(UNITY_PATH)' != ''">
     <Reference Include="UnityEngine">
       <HintPath>$(UNITY_PATH)/Managed/UnityEngine.dll</HintPath>
     </Reference>
