@@ -13,7 +13,7 @@
 <RepositoryType>git</RepositoryType>
 
 <!-- Support info -->
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <Nullable>enable</Nullable>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
