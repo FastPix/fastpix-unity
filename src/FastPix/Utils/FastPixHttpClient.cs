@@ -7,16 +7,16 @@ namespace fastpix.io.Utils
     using UnityEngine.Networking;
     using System.Threading.Tasks;
 
-    public interface FastPixHttpClient
+    public interface IFastPixHttpClient
     {
         void AddHeader(string key, string value);
         void AddQueryParam(string key, string value);
         Task<UnityWebRequest> SendAsync(UnityWebRequest message);
     }
 
-    public class FastPixHttpClient : FastPixHttpClient
+    public class FastPixHttpClient : IFastPixHttpClient
     {
-        private FastPixHttpClient? client;
+        private IFastPixHttpClient? client;
 
         private Dictionary<string, List<string>> headers { get; } =
             new Dictionary<string, List<string>>();
@@ -24,7 +24,7 @@ namespace fastpix.io.Utils
         private Dictionary<string, List<string>> queryParams { get; } =
             new Dictionary<string, List<string>>();
 
-        internal FastPixHttpClient(FastPixHttpClient? client = null)
+        internal FastPixHttpClient(IFastPixHttpClient? client = null)
         {
             this.client = client;
         }

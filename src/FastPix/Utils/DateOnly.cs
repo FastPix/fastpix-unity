@@ -247,7 +247,7 @@ namespace fastpix.io.Utils
         /// <param name="value">The object to compare to this instance.</param>
         /// <returns><see langword="true"/> if <paramref name="value"/> is an instance of <see cref="DateOnly"/> and equals the value of this instance;
         /// otherwise, <see langword="false"/>.</returns>
-        public override bool Equals([NotNullWhen(true)] object? value) => value is DateOnly dateOnly && _dayNumber == dateOnly._dayNumber;
+        public override bool Equals(object? value) => value is DateOnly dateOnly && _dayNumber == dateOnly._dayNumber;
 
         /// <summary>
         /// Returns the hash code for this instance.
