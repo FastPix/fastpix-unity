@@ -76,7 +76,7 @@ using fastpix.io.Models.Components;
 using System.Collections.Generic;
 
 var sdk = new Fastpix(security: new Security() {
-        username="your-access-token"
+        Username="your-access-token"
         Password = "secret-key",
     });
 
