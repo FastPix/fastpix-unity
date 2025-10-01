@@ -257,14 +257,16 @@ using fastpix.io.Models.Components;
 using System;
 using fastpix.io.Models.Errors;
 using System.Collections.Generic;
+using FastPixInput = fastpix.io.Models.Components.Input;
+using FastPixSecurity = fastpix.io.Models.Components.Security;
 
-var sdk = new Fastpix(security: new Security() {
+var sdk = new Fastpix(security: new FastPixSecurity() {
         username="your-access-token"
         Password = "secret-key",
     });
 
 CreateMediaRequest req = new CreateMediaRequest() {
-    Inputs = new List<fastpix.io.Models.Components.Input>() {
+    Inputs = new List<FastPixInput>() {
         Input.CreateVideoInput(
             new VideoInput() {
                 Type = "video",
@@ -322,16 +324,18 @@ The default server can be overridden globally by passing a URL to the `serverUrl
 using fastpix.io;
 using fastpix.io.Models.Components;
 using System.Collections.Generic;
+using FastPixInput = fastpix.io.Models.Components.Input;
+using FastPixSecurity = fastpix.io.Models.Components.Security;
 
 var sdk = new Fastpix(
     serverUrl: "https://api.fastpix.io/v1/",
-    security: new Security() {
+    security: new FastPixSecurity() {
         username="your-access-token"
         Password = "secret-key",
     });
 
 CreateMediaRequest req = new CreateMediaRequest() {
-    Inputs = new List<fastpix.io.Models.Components.Input>() {
+    Inputs = new List<FastPixInput>() {
         Input.CreateVideoInput(
             new VideoInput() {
                 Type = "video",
